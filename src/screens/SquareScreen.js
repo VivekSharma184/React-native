@@ -10,10 +10,22 @@ const [blue , setBlue ] = useState(0);
 
 const COLOR_INCREAMENT = 15;
 
+const setColor = (color , change) => {
+    if(color === 'red'){
+        if(red + change > 255 || red + change <0 )  {
+            return;
+        }
+        else{
+            setRed(red + change);
+        }
+    }
+}
+
+
 return <View>
     <ColorCounter 
-    onIncrease = {()=> setRed(red + COLOR_INCREAMENT )}
-    onDecrease = {() => setRed(red - COLOR_INCREAMENT )}
+    onIncrease = {()=> setColor('red' , COLOR_INCREAMENT)}
+    onDecrease = {() => setColor('red' , -1 * COLOR_INCREAMENT )}
     color='RED'
     />
     <ColorCounter 
