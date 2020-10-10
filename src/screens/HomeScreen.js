@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.view}>
       <Text style={styles.text}>HomeScreen By VV</Text>
       <Button
         onPress={() => navigation.navigate("Components")}
@@ -38,6 +38,11 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Text   Demo "
       />
 
+        <Button
+        onPress={() => navigation.navigate("Box")}
+        title="Go to Box Demo "
+      />
+
     </View>
   );
 };
@@ -46,6 +51,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
   },
+  view: {
+    
+    
+    
+  }
 });
 
 export default HomeScreen;
